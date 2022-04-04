@@ -28,7 +28,7 @@ plugins:
 # Theme
 remote_theme: BDHU/minimalist
 favicon: true
-logo: /assets/imgs/profile.webp
+logo: /assets/img/profile.webp
 sidebar:
 - name: olivier at oroques.dev
   icon: <i class="fa-solid fa-envelope"></i>
