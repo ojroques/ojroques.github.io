@@ -2,36 +2,27 @@
 
 set -e
 
-USER=${SUDO_USER:-root}
-HOME=$(getent passwd "$USER" | cut -d: -f6)
-
-function update() {
-  apt-get update
-  apt-get upgrade -y
-}
-
 function install() {
-  apt-get install -y git sudo
-  rm -rf "$HOME"/dotfiles
-  sudo -u "$USER" git clone https://github.com/ojroques/dotfiles.git "$HOME"/dotfiles
-  pushd "$HOME"/dotfiles
-    echo "1" | ./install.sh
-  popd
+  local user
+  local home
+
+  user=${SUDO_USER:-$USER}
+  home=$(getent passwd "$user" | cut -d: -f6)
+
+  apt-get update
+  apt-get install -y git make
+
+  pushd "$home" > /dev/null
+    sudo -u "$user" mkdir -p Documents Downloads .tmp
+    rm -rf .local/share/bash .bashrc .gitconfig .config/nvim .vimrc dotfiles
+    sudo -u "$user" git clone https://github.com/ojroques/dotfiles.git
+  popd > /dev/null
+
+  pushd "$home"/dotfiles > /dev/null
+    make install-cli
+    make clean
+    sudo -u "$user" stow bash git nvim vim
+  popd > /dev/null
 }
 
-function config() {
-  sudo -u "$USER" mkdir -p "$HOME"/Documents "$HOME"/Downloads "$HOME"/.tmp
-  rm -rf \
-    "$HOME"/.local/share/bash \
-    "$HOME"/.bashrc \
-    "$HOME"/.gitconfig \
-    "$HOME"/.config/nvim \
-    "$HOME"/.vimrc
-  pushd "$HOME"/dotfiles
-    sudo -u "$USER" stow bash git nvim vim
-  popd
-}
-
-update
 install
-config
