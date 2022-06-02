@@ -14,11 +14,11 @@ function install() {
 
   pushd "$home" > /dev/null
     sudo -u "$user" mkdir -p Documents Downloads .tmp
-    rm -rf .local/share/bash .bashrc .gitconfig .config/nvim .vimrc dotfiles
-    sudo -u "$user" git clone https://github.com/ojroques/dotfiles.git
+    rm -rf .local/share/bash .bashrc .gitconfig .config/nvim .vimrc Documents/dotfiles
+    sudo -u "$user" git clone https://github.com/ojroques/dotfiles.git Documents/dotfiles
   popd > /dev/null
 
-  pushd "$home"/dotfiles > /dev/null
+  pushd "$home"/Documents/dotfiles > /dev/null
     make install-cli
     make clean
     sudo -u "$user" stow bash git nvim vim
