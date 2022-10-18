@@ -18,7 +18,7 @@ Paris](https://www.telecom-paris.fr/en/home) of a *Diplôme d’ingénieur* (MSc
 Engineering) in 2020.
 
 ## Pages
-* [Resume]({% link assets/docs/resume_en.pdf %})
+* [Resume]({% link assets/docs/resume.en.pdf %})
 * [Projects]({% link projects.md %})
 * [Lecture Notes]({% link lecture-notes.md %})
 
