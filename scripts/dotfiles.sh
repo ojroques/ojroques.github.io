@@ -2,9 +2,9 @@
 
 set -e
 
-export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND="noninteractive"
 
-function install() {
+function install {
   local user
   local home
 
@@ -29,12 +29,16 @@ function install() {
 
   # Remove old dotfiles
   pushd "$home" > /dev/null
-    rm -rf .local/share/bash .bashrc .gitconfig .config/nvim .vimrc
+    rm -rf .config/git
+    rm -rf .config/nvim
+    rm -rf .tmux.conf
+    rm -rf .vimrc
+    rm -rf .zshenv .config/zsh .local/share/zsh .local/state/zsh
   popd > /dev/null
 
   # Install dotfiles
   pushd "$home"/Documents/dotfiles > /dev/null
-    sudo -u "$user" stow bash git nvim vim
+    sudo -u "$user" stow git nvim tmux vim zsh
   popd > /dev/null
 }
 

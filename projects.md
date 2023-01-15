@@ -3,8 +3,7 @@
 
 # Projects
 
-Most of my projects and more can be found on my
-[GitHub](https://github.com/ojroques).
+My projects and more can be found on my [GitHub](https://github.com/ojroques).
 
 ### 2022
 * [nvim-hardline](https://github.com/ojroques/nvim-hardline): A Neovim

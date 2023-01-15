@@ -28,9 +28,9 @@ plugins:
 # Theme
 remote_theme: BDHU/minimalist
 favicon: true
-logo: /assets/img/profile.webp
+logo: /assets/imgs/profile.webp
 sidebar:
-- name: olivier at oroques.dev
+- name: olivier at olvroq.com
   icon: <i class="fa-solid fa-envelope"></i>
   link: "mailto:"
 - name: GitHub
