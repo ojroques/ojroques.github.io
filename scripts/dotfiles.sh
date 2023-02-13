@@ -16,7 +16,7 @@ function install {
 
   # Fetch dotfiles
   pushd "$home" > /dev/null
-    sudo -u "$user" mkdir -p Documents Downloads .tmp
+    sudo -u "$user" mkdir -p Documents Downloads Work .tmp
     rm -rf Documents/dotfiles
     sudo -E -u "$user" git clone https://github.com/ojroques/dotfiles.git Documents/dotfiles
   popd > /dev/null

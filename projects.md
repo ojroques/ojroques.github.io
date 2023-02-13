@@ -6,6 +6,8 @@
 My projects and more can be found on my [GitHub](https://github.com/ojroques).
 
 ### 2022
+* [nvim-osc52](https://github.com/ojroques/nvim-osc52): A rewrite of
+  [vim-oscyank](https://github.com/ojroques/vim-oscyank) in Lua for Neovim.
 * [nvim-hardline](https://github.com/ojroques/nvim-hardline): A Neovim
   statusline plugin.
 
