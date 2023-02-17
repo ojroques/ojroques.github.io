@@ -3,11 +3,8 @@
 
 # About Me
 
-I'm currently a DevOps Engineer at [Scaleway](https://www.scaleway.com) in
-Paris, France since 2023.
-
-Before that, I worked at Cisco from 2019 to 2023 as a Network Engineer on
-scalable end-to-end encryption solutions for real-time communications.
+I'm working at Cisco as a Network Engineer on scalable end-to-end encryption
+solutions for real-time communications.
 
 I graduated from [Imperial
 College](https://www.imperial.ac.uk/study/pg/computing/secure-software-systems/)
