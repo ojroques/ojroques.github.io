@@ -1,6 +1,6 @@
 # ojroques.github.io
 
-[oroques.dev](https://oroques.dev/)
+[oroques.com](https://oroques.com/)
 
 My personal website built with [Jekyll](https://github.com/jekyll/jekyll) and
 the [minimalist](https://github.com/BDHU/minimalist) theme.

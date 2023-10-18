@@ -1,20 +1,18 @@
 # General
-domain: oroques.dev
-url: https://oroques.dev
+domain: oroques.com
+url: https://oroques.com
 title: Olivier Roques
 author: Olivier Roques
 exclude: [README.md]
 
 # Defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: pages
     values:
       layout: default
-  -
-    scope:
+  - scope:
       path: ""
       type: posts
     values:
@@ -30,7 +28,7 @@ remote_theme: BDHU/minimalist
 favicon: true
 logo: /assets/imgs/profile.webp
 sidebar:
-- name: olivier at oroques.dev
+- name: olivier at oroques.com
   icon: <i class="fa-solid fa-envelope"></i>
   link: "mailto:"
 - name: GitHub
